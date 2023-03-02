@@ -18,7 +18,7 @@ export default function Home() {
         },
         {
             title: 'StudySync',
-            description: 'I designed and built StudySync, a tool to help students take more efficient notes in class. With a passion for creating innovative and user-friendly solutions, I worked closely with the StudySync team to understand their needs and develop a web app that met the unique requirements of their target audience.\n',
+            description: 'I designed and built StudySync, a tool to help students take more efficient notes in class.\n',
             image: '/projects/Screenshot 2023-03-01 at 20-48-07 StudySync.png',
             link:'https://www.studysync.life/'
         }
