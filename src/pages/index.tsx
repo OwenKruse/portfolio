@@ -5,6 +5,7 @@ import styles from '@/styles/Home.module.css'
 import {Button, Grid, Typography} from "@mui/material";
 import NavigationBar from "@/components/NavigationBar";
 const inter = Inter({ subsets: ['latin'] })
+import { useMediaQuery } from "@mui/material";
 import Projects from "@/components/Projects";
 import React from "react";
 
@@ -18,11 +19,13 @@ export default function Home() {
         },
         {
             title: 'StudySync',
-            description: 'I designed and built StudySync, a tool to help students take more efficient notes in class.\n',
+            description: 'I designed and built StudySync, a tool to help students take more efficient notes in class. The app uses OpenAI\'s Whisper to transcribe meetings and lectures. The app is built with Next.js, React, and MongoDB.',
             image: '/projects/Screenshot 2023-03-01 at 20-48-07 StudySync.png',
             link:'https://www.studysync.life/'
         }
     ]
+
+    const isMobile = useMediaQuery('(max-width: 800px)');
   return (
     <>
       <Head>
@@ -40,7 +43,8 @@ export default function Home() {
                   width: '100%',
                     backgroundRepeat: 'no-repeat',
                     backgroundSize: 'cover',
-                    backgroundPosition: 'flex-start',
+                  // If it is a mobile device, then the background image should be cropped to the right and down
+                    backgroundPosition: isMobile ? '23%' : 'flex-start',
               }
           }>
               <Grid container item sx={
@@ -52,7 +56,7 @@ export default function Home() {
                         height: '100%',
                         padding: '0 2rem',
                         flexWrap: 'nowrap',
-                        maxWidth: '35%',
+                        maxWidth: isMobile ? '100%' : '35%',
                     }
               }>
                 <Grid item sx={
@@ -73,7 +77,7 @@ export default function Home() {
                 <Grid item xs={12} sx={
                     {
                         display: 'flex',
-                        flexDirection: 'row',
+                        flexDirection: isMobile ? 'column' : 'row',
                         justifyContent: 'flex-start',
                         alignItems: 'flex-start',
                         flexWrap: 'nowrap',
@@ -98,6 +102,9 @@ export default function Home() {
                             fontWeight: '100',
                             fontSize: '1rem',
                             textAlign: 'left',
+                            backgroundColor: isMobile ? 'rgba(255,255,255,0.47)' : 'transparent',
+                            padding: isMobile ? '1rem' : '0',
+                            borderRadius: isMobile ? '1rem' : '0',
                         }
                     }>
                         Welcome to my developer portfolio website! I am a computer science student at Western Washington University and a software developer with a passion for creating innovative and efficient solutions to complex problems. Here, you will find a showcase of my past projects, technical skills, and professional experience.
@@ -109,8 +116,9 @@ export default function Home() {
                             flexDirection: 'row',
                             justifyContent: 'center',
                             alignItems: 'center',
-                            width: '80%',
+                            width: '100%',
                             paddingTop: '1rem',
+                            paddingBottom: '1rem',
 
                         }
                   }>
@@ -125,7 +133,7 @@ export default function Home() {
           <Grid container sx={
               {
                   display: 'flex',
-                  flexDirection: 'row',
+                  flexDirection: isMobile ? 'column' : 'row',
                   justifyContent: 'center',
                   alignItems: 'flex-start',
                   paddingTop: '5rem',
@@ -135,6 +143,7 @@ export default function Home() {
           }>
           {projects.map((project, index) => {
               return (
+
         <Projects project={project} key={index}/>
                 )
           })}

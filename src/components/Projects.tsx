@@ -1,20 +1,22 @@
 import {Button, Grid, Paper, Typography, Box} from "@mui/material";
 import Image from "next/image";
+import { useMediaQuery } from "@mui/material";
 
 export default function Projects(projects: any) {
 const {title, description, image, link} = projects.project;
-
+    const isMobile = useMediaQuery('(max-width: 800px)');
 
     return (
 
 
-                <Grid item sx={
+                <Grid  sx={
                     {
                         display: 'flex',
                         flexDirection: 'column',
                         justifyContent: 'center',
-                        alignItems: 'flex-start',
+                        alignItems: isMobile ? 'center' : 'flex-start',
                         padding: '0 2rem',
+                        marginBottom: isMobile ? '2rem' : '0',
                         flexWrap: 'nowrap',
                     }
                 }>
@@ -26,7 +28,7 @@ const {title, description, image, link} = projects.project;
                             alignItems: 'center',
                             padding: '1rem',
                             flexWrap: 'nowrap',
-                            width: '30rem',
+                            width: isMobile ? '100%' : '35rem',
                             backgroundColor: '#B9C9CB',
 
                         }
