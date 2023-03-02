@@ -1,10 +1,7 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import {Button, Grid, Typography} from "@mui/material";
 import NavigationBar from "@/components/NavigationBar";
-const inter = Inter({ subsets: ['latin'] })
 import { useMediaQuery } from "@mui/material";
 import Projects from "@/components/Projects";
 import React from "react";
