@@ -29,7 +29,6 @@ export default function Home() {
         <title>Owen Kruse | Developer | Student |</title>
         <meta name="description" content="Owen Kruse Portfolio Website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
             <NavigationBar/>

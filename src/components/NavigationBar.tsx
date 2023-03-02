@@ -1,5 +1,4 @@
 import {AppBar, Button, IconButton, Toolbar, Typography} from '@mui/material'
-import MenuIcon from '@mui/icons-material/Menu';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 export default function NavigationBar() {
