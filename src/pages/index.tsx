@@ -19,7 +19,20 @@ export default function Home() {
             description: 'I designed and built StudySync, a tool to help students take more efficient notes in class. The app uses OpenAI\'s Whisper to transcribe meetings and lectures. The app is built with Next.js, React, and MongoDB.',
             image: '/projects/Screenshot 2023-03-01 at 20-48-07 StudySync.png',
             link:'https://www.studysync.life/'
+        },
+        {
+            title: 'Optimized Horizons',
+            description: "I worked with a small team of people interested in designing and building a company that provided SEO opportunities to companies. The project started in Figma where I designed and created a website that satisfied the clients interests. I then built the website using Next.js and React.",
+            image: '/projects/Screenshot 2023-09-19 at 3.07.03 PM.png',
+            link:'https://op-horizons.vercel.app/'
+        },
+        {
+            title: 'Documentation AI',
+            description: "I worked on a personal project which aimed to give developers a new way to interface with their documentation through the use of GPT-3. The project included a fully functional website, custom react component and complex backend work with PineConeDB and JavaScript.",
+            image: '/projects/Screenshot 2023-09-19 at 3.12.32 PM.png',
+            link:'https://ai-doc-one.vercel.app/',
         }
+
     ]
 
     const isMobile = useMediaQuery('(max-width: 800px)');
@@ -134,6 +147,7 @@ export default function Home() {
                   justifyContent: 'center',
                   alignItems: 'flex-start',
                   paddingTop: '5rem',
+                  paddingBottom: '5rem',
                   minHeight: '100vh',
                   background: 'linear-gradient(90deg, #DCE4E5 0%, #DBE2E4 0%, #C7CFD0 100%)',
               }
